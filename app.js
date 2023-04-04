@@ -12,7 +12,7 @@ const mysql = require('mysql2');
 var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    database: 'yenimora',
+    database: 'products',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
@@ -128,7 +128,7 @@ function create_list(req, res) {
 ///////////////
 //EXPRESS WEB//
 ///////////////
-const port = 3000;
+const port = 80;
 const express = require('express')
 const app = express()
 app.use(bodyParser.urlencoded({ limit: '500mb' }));
